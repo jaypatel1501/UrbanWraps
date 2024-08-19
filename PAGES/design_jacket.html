@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+    <title>CUSTOMIZE YOUR JACKET</title>
+</head>
+
+<body>
+    <header>
+        <a href="#"><img src="../IMAGES/urbanwraps_logo.png" alt="" height="50px" width="100px" class="logo"> </a>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="../index.html">HOME</a></li>
+                <li><a href="#">MEN</a></li>
+                <li><a href="#">WOMEN</a></li>
+                <li><a href="#">PATCHES</a></li>
+                <li><a href="design_jacket.html">DESIGN MY JACKET</a></li>
+            </ul>
+        </nav>
+        <div class="search-bar">
+
+            <input type="text" class="search-input" placeholder="Search">
+            <i class="fa fa-search" aria-hidden="true"></i>
+        </div>
+        <div class="user-cart">
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+            <i class="fa fa-user" aria-hidden="true"></i>
+        </div>
+    </header>
+    <div class="mainContainer">
+        <div class="con">
+            <object data="../SVG/jacket.svg" type="image/svg+xml" id="jacket"></object>
+
+        </div>
+        <div class="Editor">
+            <div class="TabsContainer">
+                <h1>CUSTOMIZE</h1>
+
+                <div style="border: 5px solid;">
+                    <h2 class="selectStyle"
+                        style="border: 2px solid; border-top: hidden;border-left: hidden; border-right: hidden; padding-bottom: 20px;">
+                        Jacket Style</h2>
+
+                    <div style="display: flex;" class="blocStyle">
+                        <div>Choose Collar/ Strips</div>
+                        <div class="tabs" id="tab8">Single Strip</div>
+                        <div class="tabs" id="tab9">Double Strip</div>
+                        <div class="tabs" id="tab10">Default Collar</div>
+                        <div class="tabs" id="tab11">Collar 1</div>
+                        <div class="tabs" id="tab12">Collar 2</div>
+                        <div class="tabs" id="tab13">Collar 3</div>
+                    </div>
+                    <div class="content-tab" display="hidden">
+                        <div class="content" id="content9">
+                            <div class="Container" id="colorSelector9"></div>
+                        </div>
+                        <div class="content" id="content9">
+                            <div class="Container" id="colorSelector9"></div>
+                        </div>
+                        <div class="content" id="content10">
+                            <div class="Container" id="colorSelector10"></div>
+                        </div>
+                        <div class="content" id="content10">
+                            <div class="Container" id="colorSelector10"></div>
+                        </div>
+                        <div class="content" id="content10">
+                            <div class="Container" id="colorSelector10"></div>
+                        </div>
+                        <div class="content" id="content10">
+                            <div class="Container" id="colorSelector10"></div>
+                        </div>
+                    </div>
+                    <h2 class="selectColor"
+                        style="border: 2px solid; border-top: hidden;border-left: hidden; border-right: hidden; padding-bottom: 20px;">
+                        Color
+
+                    </h2>
+
+                    <div class="blocTabs"
+                        style="border: 2px solid; border-top: hidden;border-left: hidden; border-right: hidden; ">
+                        <div class="tabs" id="tab1">Body</div>
+                        <div class="tabs" id="tab2">Sleeve</div>
+                        <div class="tabs" id="tab3">Pockets</div>
+                        <div style="display: flex;">
+                            <div class="tabs" id="tab4" class="btn-snaps">Buttons</div>
+                            <div class="tabs" id="tab5" class="btn-zipper">Zipper</div>
+                        </div>
+
+                        <div class="tabs" id="tab6">Collor</div>
+                        <div class="tabs" id="tab7">Strips</div>
+                        <div class="tabs" id="tab714">Inner Side</div>
+                        <div class="content-tab">
+                            <div class="content" id="content1">
+                                <div class="Container" id="colorSelector"></div>
+                            </div>
+                            <div class="content" id="content2">
+                                <div class="Container" id="colorSelector2"></div>
+                            </div>
+                            <div class="content" id="content3">
+                                <div class="Container" id="colorSelector3"></div>
+                            </div>
+                            <div class="content" id="content4">
+                                <div class="Container" id="colorSelector4"></div>
+                            </div>
+                            <div class="content" id="content5">
+                                <div class="Container" id="colorSelector5"></div>
+                            </div>
+                            <div class="content" id="content6">
+                                <div class="Container" id="colorSelector6"></div>
+                            </div>
+                            <div class="content" id="content7">
+                                <div class="Container" id="colorSelector7"></div>
+                            </div>
+                            <div class="content" id="content8">
+                                <div class="Container" id="colorSelector8"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <h2 class="selectDesign"
+                        style="border: 2px solid; border-top: hidden;border-left: hidden; border-right: hidden; padding-bottom: 20px;">
+                        Design</h2>
+                    <h2 class="selectSize"
+                        style="border: 2px solid; border-top: hidden;border-left: hidden; border-right: hidden; padding-bottom: 20px;">
+                        Size</h2>
+                </div>
+
+            </div>
+            <!-- <div class="navigation">
+                <button id="prev" class="white-btn">Previous</button>
+                <button id="next" class="btn">Next</button>
+            </div> -->
+        </div>
+
+    </div>
+
+
+
+    <script>
+        const selectBody = document.querySelector('.selectColor');
+        const blocTabs = document.querySelector('.blocTabs');
+        const contentTab = document.querySelector('.content-tab');
+
+        // Initially hide blocTabs and contentTab
+        blocTabs.style.display = 'none';
+        contentTab.style.display = 'none';
+
+        // Flag to track if selectBody is active
+        let isSelectBodyActive = false;
+
+        selectBody.addEventListener('click', () => {
+            isSelectBodyActive = !isSelectBodyActive; // Toggle active state
+
+            if (isSelectBodyActive) {
+                // Show blocTabs and contentTab when active
+                blocTabs.style.display = 'block';
+                contentTab.style.display = 'block';
+            } else {
+                // Hide blocTabs and contentTab when not active
+                blocTabs.style.display = 'none';
+                contentTab.style.display = 'none';
+            }
+            const contentTab = document.querySelector('.selectStyle .content-tab');
+            contentTab.style.display = 'block';
+        });
+
+        // Get the element with class selectStyle
+        const selectStyle = document.querySelector('.selectStyle');
+
+        // Get the element with class blocStyle
+        const blocStyle = document.querySelector('.blocStyle');
+        // const contentTab = document.querySelector('.content-tab');
+        // Hide the blocStyle element by default
+        blocStyle.style.display = 'none';
+        // contentTab.style.display = 'none';
+        // Add an event listener to the selectStyle element
+        selectStyle.addEventListener('click', () => {
+            // Toggle the display of the blocStyle element
+            blocStyle.style.display = blocStyle.style.display === 'none' ? 'block' : 'n';
+
+        });
+
+
+
+
+        // const selectColor = document.querySelector('.select-color');
+        // selectColor.addEventListener('click', () => {
+        //     selectStyle.style.display = 'block';
+        //     const contentTab = document.querySelector('.content-tab');
+        //         contentTab.style.display = 'none';
+        // })
+
+
+    </script>
+    <script src="../JS/script.js"></script>
+</body>
+
+</html>
